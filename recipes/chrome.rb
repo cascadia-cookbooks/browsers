@@ -5,17 +5,14 @@
 
 case node['platform_family']
 when 'debian'
+    package 'apt-transport-https'
+
     apt_repository 'chrome' do
         uri          'https://dl.google.com/linux/chrome/deb/'
         key          'https://dl.google.com/linux/linux_signing_key.pub'
         # NOTE: remove distro from repo file
         distribution ''
         components   ['stable', 'main']
-    end
-
-    execute 'update apt' do
-        command 'apt-get update'
-        action  :nothing
     end
 when 'rhel'
     yum_repository 'chrome' do
