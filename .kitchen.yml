@@ -1,0 +1,20 @@
+---
+driver:
+  name: vagrant
+
+provisioner:
+  name: chef_zero
+
+platforms:
+  - name: ubuntu/xenial64  # 16.04
+  - name: ubuntu/trusty64  # 14.04
+  - name: centos/7         # 7
+  - name: debian/jessie64  # 8
+  - name: debian/stretch64 # 9
+
+suites:
+  - name: default
+    run_list:
+    - recipe[cop_browsers::default]
+    - recipe[cop_browsers::chrome]
+    attributes:
