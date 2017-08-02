@@ -13,8 +13,7 @@ platforms:
   - name: debian/stretch64 # 9
 
 suites:
-  - name: default
+  - name: chrome
     run_list:
-    - recipe[cop_browsers::default]
     - recipe[cop_browsers::chrome]
     attributes:
