@@ -11,5 +11,5 @@ issues_url 'https://github.com/copious-cookbooks/browsers/issues'
 
 supports 'ubuntu', '>= 14.04'
 supports 'debian', '>= 8'
-supports 'rhel', '>= 6'
-supports 'centos', '>= 6'
+supports 'rhel', '>= 7'
+supports 'centos', '>= 7'
